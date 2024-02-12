@@ -1,21 +1,29 @@
 import React, { useState } from "react";
-import { FlatList, SafeAreaView, ScrollView, StyleSheet, View } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import Header from "./components/Header";
 import ToDoCard from "./components/ToDoCard";
 import Input from "./components/Input";
 
 
 function App() {
-  
   const renderToDo = ({item, index}) => (
-    <ToDoCard key={index.toString()} toDo={item.content} />
+    <ToDoCard key={index.toString()} toDo={item.content} onDeleteToDo={deleteToDo} />
   )
   const [toDoList, setToDoList] = useState([]);
   const [counter, setCounter] = useState(0);
 
-  const addToDo = ({content}) =>{
-    setToDoList([...toDoList, {content}]);
+  const addToDo = ({content, completed}) =>{
+    setToDoList([...toDoList, {content, completed}]);
     setCounter(counter + 1);
+  }
+
+  const deleteToDo = ({completed}) => {
+    if (completed) {
+      setCounter(counter-1);
+    }
+    else{
+      setCounter(counter+1);
+    }
   }
 
   return(

@@ -17,7 +17,6 @@ export default StyleSheet.create({
     button:{
         marginHorizontal:15,
         paddingVertical:6,
-        backgroundColor:"#808080",
         alignItems:"center",
         borderRadius:10,
     }
