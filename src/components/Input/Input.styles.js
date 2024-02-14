@@ -4,7 +4,7 @@ export default StyleSheet.create({
     container:{
         backgroundColor:"#37474f",
         width:Dimensions.get("window").width*1,
-        height:Dimensions.get("window").height*0.15,
+        height:Dimensions.get("window").height*0.17,
         position:"absolute",
         bottom:0
     },

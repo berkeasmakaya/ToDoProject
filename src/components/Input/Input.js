@@ -36,7 +36,7 @@ const Input = ({onAddToDo}) => {
                 
             />
             <TouchableOpacity style={[styles.button, {backgroundColor:buttonColor}]} onPress={handleAddToDo}   >
-                <Text style={{fontWeight:"bold", color:"#000000"}} >SAVE</Text>
+                <Text numberOfLines={4} ellipsizeMode="tail" style={{fontWeight:"bold", color:"#000000"}} >SAVE</Text>
             </TouchableOpacity>
         </View>
     );

@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from "react-native";
 
 export default StyleSheet.create({
     container:{
-        height:Dimensions.get("window").height*0.1,
+        flex:1
     },
     touchable_op:{
         borderRadius:10,
@@ -11,7 +11,7 @@ export default StyleSheet.create({
         textDecorationLine:"underline"
     },
     text:{
-        fontSize:30,
+        fontSize:25,
         padding:5,
         margin:5,
         color:"white"
